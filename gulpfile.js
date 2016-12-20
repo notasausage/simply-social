@@ -114,6 +114,12 @@ function json() {
         .pipe( gulp.dest( 'src/data' ) );
 }
 
+// Refresh Panini's cache of layouts and partials
+function refresh( done ) {
+    panini.refresh();
+    done();
+}
+
 // Compile layouts, pages, and partials into flat HTML files with Panini
 function pages() {
     return gulp.src( 'src/pages/**/*.html' )
@@ -164,7 +170,7 @@ function imagesDist() {
 // Watch for file changes while BrowserSync is running
 function watch() {
     gulp.watch( 'src/pages/**/*.html' ).on( 'change', gulp.series( pages, browser.reload ) );
-    gulp.watch( ['src/layouts/**/*', 'src/partials/**/*'] ).on( 'change', gulp.series( pages, browser.reload ) );
-    gulp.watch( ['../scss/**/*.scss', 'src/assets/scss/**/*.scss'] ).on( 'change', gulp.series( json, scss, pages, browser.reload ) );
+    gulp.watch( ['src/layouts/**/*', 'src/partials/**/*'] ).on( 'change', gulp.series( refresh, pages, browser.reload ) );
+    gulp.watch( ['../scss/**/*.scss', 'src/assets/scss/**/*.scss'] ).on( 'change', gulp.series( refresh, json, scss, pages, browser.reload ) );
     gulp.watch( 'src/assets/img/**/*' ).on( 'change', gulp.series( images, browser.reload ) );
 }
