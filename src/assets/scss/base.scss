@@ -1,0 +1,93 @@
+/* ******************************************
+    Setup Base Styling
+****************************************** */
+html {
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    background: #fff;
+    font-family: Helvetica, sans-serif;
+    color: #222;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+::-moz-selection {
+    background: #222;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #222;
+    color: #fff;
+    text-shadow: none;
+}
+
+a,
+a:visited,
+a:active {
+    color: #666;
+}
+
+a:hover {
+    color: #666;
+}
+
+h1, h2, h3 {
+    color: #111;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+h4, h5, h6 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* ******************************************
+    Float Clearing
+****************************************** */
+
+.group:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+/* ******************************************
+    Accessible Hide
+****************************************** */
+.visuallyhidden {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+/********************************************
+    Fixes for IE6-8
+    http://jonikorpi.com/leaving-old-IE-behind/
+********************************************/
+
+.ie body {
+    width: 40em;
+    margin: 0 auto;
+    font-size: 1.0625em;
+}
+
+.ie h1 {
+    font-size: 2.625em; /* 42px */
+    line-height: 1.1428571428571428em; /* 48px */
+    padding: 1.1428571428571428em 0 0.5714285714285714em;
+}

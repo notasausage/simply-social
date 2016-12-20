@@ -93,7 +93,7 @@ function clean( folder ) {
 
 // Compile the SCSS for the build folder
 function scss() {
-    return gulp.src( 'src/assets/scss/*.scss' )
+    return gulp.src( 'src/assets/scss/all.scss' )
         .pipe( concat( 'style.scss/' ) )
         .pipe( sass().on( 'error', sass.logError ) )
         .pipe( gulp.dest( './build/assets/css/' ) );
@@ -101,7 +101,7 @@ function scss() {
 
 // Compile the SCSS for the distribution folder
 function scssDist() {
-    return gulp.src( 'src/assets/scss/*.scss' )
+    return gulp.src( 'src/assets/scss/all.scss' )
         .pipe( concat( 'style.scss/' ) )
         .pipe( sass().on( 'error', sass.logError ) )
         .pipe( gulp.dest( './dist/assets/css/' ) );
