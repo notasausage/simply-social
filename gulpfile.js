@@ -6,6 +6,7 @@ var gulp = require( 'gulp' ),
     del = require( 'del' ),
     imagemin = require( 'gulp-imagemin' ),
     replace = require( 'gulp-replace' ),
+    concat = require( 'gulp-concat' ),
     gutil = require( 'gulp-util' ),
     lazypipe = require( 'lazypipe' ),
     panini = require( 'panini' ),
@@ -92,14 +93,16 @@ function clean( folder ) {
 
 // Compile the SCSS for the build folder
 function scss() {
-    return gulp.src( 'src/assets/scss/base.scss' )
+    return gulp.src( 'src/assets/scss/*.scss' )
+        .pipe( concat( 'style.scss/' ) )
         .pipe( sass().on( 'error', sass.logError ) )
         .pipe( gulp.dest( './build/assets/css/' ) );
 };
 
 // Compile the SCSS for the distribution folder
 function scssDist() {
-    return gulp.src( 'src/assets/scss/base.scss' )
+    return gulp.src( 'src/assets/scss/*.scss' )
+        .pipe( concat( 'style.scss/' ) )
         .pipe( sass().on( 'error', sass.logError ) )
         .pipe( gulp.dest( './dist/assets/css/' ) );
 };
