@@ -39,6 +39,7 @@ gulp.task( 'build',
     gulp.series(
         'cleanBuild',
         json,
+        ie,
         pages,
         scss,
         images
@@ -50,6 +51,7 @@ gulp.task( 'dist',
     gulp.series(
         'cleanDist',
         json,
+        ie,
         pagesDist,
         scssDist,
         imagesDist
@@ -112,6 +114,12 @@ function json() {
     return gulp.src( 'src/assets/scss/settings.scss' )
         .pipe( sassJson() )
         .pipe( gulp.dest( 'src/data' ) );
+}
+
+// Move files from IE asset folder to build
+function ie() {
+    return gulp.src( 'src/assets/ie/*' )
+        .pipe( gulp.dest( './build/assets/ie/' ) );
 }
 
 // Refresh Panini's cache of layouts and partials
