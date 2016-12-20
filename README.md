@@ -1,7 +1,7 @@
 # Simply Social
 A web application code challenge from InVision, accepted and completed by Patrick Haney using Gulp, Panini, Sass and standards-based HTML & CSS (and a bit of JavaScript too).
 
-*Note: This project Gulp 4.0. To run it, you'll need to install Gulp 4 globally but can run older versions of Gulp locally.*
+*Note: This project uses Gulp 4.0. To run it, you'll need to install Gulp 4 globally but can run older versions of Gulp locally.*
 
 To remove previous versions of Gulp:
 
