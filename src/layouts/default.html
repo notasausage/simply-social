@@ -11,73 +11,84 @@
 </head>
 
 <body>
-    <header>
-        <h2>Primary Navigation</h2>
-        <a href="/">SimplySocial</a>
-        <button>New Post</button>
+    <header class="container">
+        <h2 class="visuallyhidden">Primary Navigation</h2>
+        <nav class="wrapper">
+            <a href="/">SimplySocial</a>
 
-        <h3>Search SimplySocial</h3>
-        <form method="get" name="form-search">
-            <input type="text" name="search" />
-        </form>
+            <button>New Post</button>
 
-        <h3>Profile &amp; Settings</h3>
-        <img src="" alt="Your Photo" />
-        <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Followers</a></li>
-            <li><a href="#">Following</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
+            <h3 class="visuallyhidden">Search SimplySocial</h3>
+            <form method="get" name="form-search">
+                <input type="text" name="search" />
+            </form>
+
+            <h3 class="visuallyhidden">Profile &amp; Settings</h3>
+            <img src="" alt="Your Photo" />
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Followers</a></li>
+                <li><a href="#">Following</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h1>Home</h1>
+        <section class="wrapper">
+            <h1 class="visuallyhidden">Home</h1>
 
-        <h2>Create New Post</h2>
-        <form method="post" name="form-post">
-            <input type="text" name="post" />
-            <button>Add Photo</button>
-            <button>Add Video</button>
-        </form>
+            <h2 class="visuallyhidden">Create New Post</h2>
+            <form method="post" name="form-post">
+                <input type="text" name="post" />
+                <button>Add Photo</button>
+                <button>Add Video</button>
+            </form>
+        </section>
 
-        <h2>Filter Posts</h2>
-        <ul>
-            <li><a href="">All Posts</a></li>
-            <li><a href="">Photos</a></li>
-            <li><a href="">Videos</a></li>
-        </ul>
+        <section class="wrapper">
+            <header>
+                <h2 class="visuallyhidden">Filter Posts</h2>
+                <ul>
+                    <li><a href="">All Posts</a></li>
+                    <li><a href="">Photos</a></li>
+                    <li><a href="">Videos</a></li>
+                </ul>
 
-        <h2>Layout Options</h2>
-        <ul>
-            <li><a href="">List View</a></li>
-            <li><a href="">Grid View</a></li>
-        </ul>
+                <h2 class="visuallyhidden">Layout Options</h2>
+                <ul>
+                    <li><a href="">List View</a></li>
+                    <li><a href="">Grid View</a></li>
+                </ul>
+            </header>
 
-        <h2>Latest Posts</h2>
-        <article>
-            <img src="" alt="Photo of Sam Soffes" />
-            <h3>Sam Soffes</h3>
-            <button>Reply</button>
-            <button>Like</button>
-            <span title="3 minutes ago">3m</span>
-            <p>
-                How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly</a> Good stuff from <a href="#">@designmodo</a>!
-            </p>
-        </article>
+            <h2 class="visuallyhidden">Latest Posts</h2>
+            <article>
+                <img src="" alt="Photo of Sam Soffes" />
+                <h3>Sam Soffes</h3>
+                <button>Reply</button>
+                <button>Like</button>
+                <span title="3 minutes ago">3m</span>
+                <p>
+                    How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly</a> Good stuff from <a href="#">@designmodo</a>!
+                </p>
+            </article>
+        </section>
     </main>
 
-    <footer>
-        <h2>About SimplySocial</h2>
-        <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Support</a></li>
-            <li><a href="">Privacy</a></li>
-            <li><a href="">Terms</a></li>
-        </ul>
-        <p>
-            &copy;2016 SimplySocial
-        </p>
+    <footer class="container">
+        <section class="wrapper">
+            <h2 class="visuallyhidden">About SimplySocial</h2>
+            <ul>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Terms</a></li>
+            </ul>
+            <p>
+                &copy;2016 SimplySocial
+            </p>
+        </section>
     </footer>
 </body>
 </html>
