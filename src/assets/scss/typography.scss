@@ -6,6 +6,45 @@ header.container {
     }
 }
 
+main {
+    .container.hero {
+        // Style placeholder text for New Post box input
+        input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #fff;
+            opacity: .5;
+        }
+
+        input::-moz-placeholder { /* Firefox 19+ */
+            color: #fff;
+            opacity: .5;
+        }
+
+        input:-ms-input-placeholder { /* IE 10+ */
+            color: #fff;
+            opacity: .5;
+        }
+
+        input:-moz-placeholder { /* Firefox 18- */
+            color: #fff;
+            opacity: .5;
+        }
+
+        div.new-post {
+            input {
+                color: #fff;
+                font-family: $font-primary;
+                font-size: 1.875em; /* 30px */
+                font-weight: 200;
+            }
+
+            button {
+                color: rgba( 255, 255, 255, .5 );
+                font-size: .875em; /* 14px */
+            }
+        }
+    }
+}
+
 /* ******************************************
     Page Footer
 ****************************************** */
