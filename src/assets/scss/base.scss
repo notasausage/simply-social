@@ -9,7 +9,7 @@ html {
 
 body {
     background: #fff;
-    font-family: Helvetica, sans-serif;
+    font-family: $font-primary;
     color: #222;
 }
 
@@ -42,12 +42,12 @@ a:hover {
 
 h1, h2, h3 {
     color: #111;
-    font-family: Helvetica, sans-serif;
+    font-family: $font-primary;
     font-weight: normal;
 }
 
 h4, h5, h6 {
-    font-family: Helvetica, sans-serif;
+    font-family: $font-primary;
     font-weight: bold;
 }
 
