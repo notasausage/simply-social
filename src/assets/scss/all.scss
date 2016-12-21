@@ -1,7 +1,9 @@
 // Import all SCSS files in the correct order
 @import
+    "settings",
     "minireset",
     "base",
+    "grid",
     "layout",
     "typography"
 ;

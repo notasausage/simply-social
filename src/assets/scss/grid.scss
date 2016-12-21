@@ -1,0 +1,89 @@
+/* ******************************************
+    Elastic Gutters
+****************************************** */
+
+.wrapper {
+    padding: 0 0.75em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ******************************************
+    Elastic Gutters for IE6-7
+    http://github.com/Schepp/box-sizing-polyfill
+****************************************** */
+
+.ie .wrapper {
+    /* IE8 doesn't need this, so we use the * hack */
+    *behavior: url("../ie/boxsizing.htc");
+}
+
+/* ******************************************
+    Fluid Media
+****************************************** */
+
+figure {
+    position: relative;
+}
+
+figure img,
+figure object,
+figure embed,
+figure video {
+    max-width: 100%;
+    display: block;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* ******************************************
+    Zoomable Baseline Grid
+****************************************** */
+
+body {
+    font-size: 1em; /* 16px */
+    line-height: 1.5em; /* 24px */
+}
+
+.small,
+h5,
+h6 {
+    font-size: 0.8125em; /* 13px */
+    line-height: 1.3846153846153846em; /* 18px */
+}
+
+.normal,
+h4 {
+    font-size: 1em; /* 16px */
+    line-height: 1.5em; /* 24px */
+}
+
+.big,
+h3 {
+    font-size: 1.375em; /* 22px */
+    line-height: 1.75em; /* 28px */
+}
+
+.large,
+h2 {
+    font-size: 1.625em; /* 26px */
+    line-height: 1.23076923076923em; /* 32px */
+}
+
+.huge,
+h1 {
+    font-size: 2.625em; /* 42px */
+    line-height: 1.1428571428571428em; /* 48px */
+}
+
+/* ******************************************
+    Four Column Grid
+****************************************** */
+
+.container {
+    padding: 1em 2.555555555555555%; /* Less wasteful at phone widths */
+}
