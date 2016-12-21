@@ -13,24 +13,28 @@
 <body>
     <header class="container">
         <h2 class="visuallyhidden">Primary Navigation</h2>
-        <nav class="wrapper">
-            <a href="/">SimplySocial</a>
+        <nav class="wrapper group">
+            <a href="/" class="logo" title="SimplySocial">SimplySocial</a>
 
-            <button>New Post</button>
+            <section class="actions">
+                <button class="new" title="Create New Post">New Post</button>
 
-            <h3 class="visuallyhidden">Search SimplySocial</h3>
-            <form method="get" name="form-search">
-                <input type="text" name="search" />
-            </form>
+                <h3 class="visuallyhidden">Search SimplySocial</h3>
+                <form method="get" name="form-search" id="form-search">
+                    <input type="text" name="search" class="search" />
+                </form>
 
-            <h3 class="visuallyhidden">Profile &amp; Settings</h3>
-            <img src="" alt="Your Photo" />
-            <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Followers</a></li>
-                <li><a href="#">Following</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
+                <h3 class="visuallyhidden">Profile &amp; Settings</h3>
+                <a href="#">
+                    <img src="assets/img/avatar-patrick.jpg" alt="Your Photo" class="avatar" />
+                </a>
+                <ul class="profile">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Followers</a></li>
+                    <li><a href="#">Following</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </section>
         </nav>
     </header>
 
