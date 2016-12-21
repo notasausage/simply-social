@@ -37,10 +37,35 @@ main {
 footer.container {
     background: #fff;
     border-top: 2px solid #e6e9ec;
+    color: #70767f;
+    font-size: 11px;
+    font-weight: 500;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    text-transform: uppercase;
+
+    a,
+    a:visited {
+        color: $teal;
+    }
 
     .wrapper {
         margin: 0 auto;
-        max-width: 35.9375em; /* 575px */
         text-align: center;
+
+        ul,
+        li,
+        p {
+            display: inline-block;
+        }
+
+        li {
+            margin-right: 1.5em; /* 24px */
+
+            a {
+                display: block;
+                padding: .5em 0; /* Make links easier to tap */
+            }
+        }
     }
 }
