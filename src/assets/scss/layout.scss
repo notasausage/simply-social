@@ -96,11 +96,41 @@ main {
     }
 
     .container.body {
-        background: #fff;
+        padding-top: 0;
 
         .wrapper {
             margin: 0 auto;
             max-width: 35.9375em; /* 575px */
+        }
+
+        header.wrapper {
+            margin-top: -2.875em; /* Pull filter and view options up to hero image area */
+            margin-bottom: 3.125em; /* 50px */
+
+            ul,
+            li {
+                display: inline-block;
+            }
+
+            ul {
+                li {
+                    a {
+                        display: block;
+                    }
+
+                    &.selected {
+                        border-bottom: .25em solid $teal;
+                    }
+
+                    &:hover {
+                        border-bottom: .25em solid $teal;
+                    }
+                }
+            }
+
+            ul.filters {
+
+            }
         }
     }
 }

@@ -43,6 +43,24 @@ main {
             }
         }
     }
+
+    .container.body {
+        header.wrapper {
+            li {
+                line-height: 1em;
+
+                a {
+                    color: #fff;
+                    font-size: .875em; /* 14px */
+                    font-weight: 600;
+                    line-height: 1em;
+                    padding: 1em .5em;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
 }
 
 /* ******************************************
