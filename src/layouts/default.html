@@ -45,7 +45,7 @@
             <div class="new-post">
                 <h2 class="visuallyhidden">Create New Post</h2>
                 <form class="wrapper" method="post" name="form-post">
-                    <input type="text" name="post" id="post" placeholder="What&#8217;s on your mind?" />
+                    <input type="text" name="post" id="input-post" placeholder="What&#8217;s on your mind?" />
                     <button class="add-photo">Add Photo</button>
                     <button class="add-video">Add Video</button>
                 </form>
@@ -79,12 +79,14 @@
             </header>
 
             <h2 class="visuallyhidden">Latest Posts</h2>
-            <article class="wrapper">
-                <img src="" alt="Photo of Sam Soffes" />
-                <h3>Sam Soffes</h3>
-                <button>Reply</button>
-                <button>Like</button>
-                <span title="3 minutes ago">3m</span>
+            <article class="wrapper post">
+                <header>
+                    <img src="assets/img/avatar-sam.jpg" alt="Photo of Sam Soffes" />
+                    <h3>Sam Soffes</h3>
+                    <button class="reply">Reply</button>
+                    <button class="like">Like</button>
+                    <span title="3 minutes ago">3m</span>
+                </header>
                 <p>
                     How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly</a> Good stuff from <a href="#">@designmodo</a>!
                 </p>

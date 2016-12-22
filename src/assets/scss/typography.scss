@@ -60,6 +60,27 @@ main {
                 }
             }
         }
+
+        article.post {
+            header {
+                h3 {
+                    color: #3f454d;
+                    font-size: 1em;
+                    font-weight: 300;
+                }
+
+                span {
+                    color: #bec3cc;
+                    font-size: .875em; /* 14px */
+                }
+            }
+
+            p {
+                color: #70767f;
+                font-size: .9375em; /* 15px */
+                font-weight: 300;
+            }
+        }
     }
 }
 
