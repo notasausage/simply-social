@@ -1,0 +1,112 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>SimplySocial</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <header class="container">
+        <h2 class="visuallyhidden">Primary Navigation</h2>
+        <nav class="wrapper group">
+            <a href="/" class="logo" title="SimplySocial">SimplySocial</a>
+
+            <section class="actions">
+                <button class="new" title="Create New Post">New Post</button>
+
+                <h3 class="visuallyhidden">Search SimplySocial</h3>
+                <form method="get" name="form-search" id="form-search">
+                    <input type="text" name="search" class="search" />
+                </form>
+
+                <h3 class="visuallyhidden">Profile &amp; Settings</h3>
+                <a href="#">
+                    <img src="assets/img/avatar-patrick.jpg" alt="Your Photo" class="avatar" />
+                </a>
+                <ul class="profile">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Followers</a></li>
+                    <li><a href="#">Following</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container hero">
+            <h1 class="visuallyhidden">Home</h1>
+
+            <div class="new-post">
+                <h2 class="visuallyhidden">Create New Post</h2>
+                <form class="wrapper" method="post" name="form-post">
+                    <input type="text" name="post" id="input-post" placeholder="What&#8217;s on your mind?" />
+                    <button class="add-photo">Add Photo</button>
+                    <button class="add-video">Add Video</button>
+                </form>
+            <div>
+        </section>
+
+        <section class="container body">
+            <header class="wrapper">
+                <h2 class="visuallyhidden">Filter Posts</h2>
+                <ul class="filters">
+                    <li class="selected">
+                        <a href="#all">All Posts</a>
+                    </li>
+                    <li>
+                        <a href="#photos">Photos</a>
+                    </li>
+                    <li>
+                        <a href="#videos">Videos</a>
+                    </li>
+                </ul>
+
+                <h2 class="visuallyhidden">Layout Options</h2>
+                <ul class="views">
+                    <li class="selected">
+                        <a href="#list">List View</a>
+                    </li>
+                    <li>
+                        <a href="#grid">Grid View</a>
+                    </li>
+                </ul>
+            </header>
+
+            <h2 class="visuallyhidden">Latest Posts</h2>
+            <article class="wrapper post">
+                <header>
+                    <img src="assets/img/avatar-sam.jpg" alt="Photo of Sam Soffes" />
+                    <h3>Sam Soffes</h3>
+                    <button class="reply">Reply</button>
+                    <button class="like">Like</button>
+                    <span title="3 minutes ago">3m</span>
+                </header>
+                <p>
+                    How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly</a> Good stuff from <a href="#">@designmodo</a>!
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="container">
+        <section class="wrapper">
+            <h2 class="visuallyhidden">About SimplySocial</h2>
+            <ul>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Terms</a></li>
+            </ul>
+            <p>
+                &copy;2016 SimplySocial
+            </p>
+        </section>
+    </footer>
+</body>
+</html>
