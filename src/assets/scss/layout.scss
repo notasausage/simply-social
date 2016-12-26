@@ -136,6 +136,7 @@ main {
         article.post {
             border: 1px solid #dee1e5;
             border-radius: 4px;
+            margin-bottom: 1.5em;
             padding: 1.5em 1.5em 1.5em 5.25em;
             position: relative;
 
@@ -192,6 +193,22 @@ main {
                     }
                 }
             } /* END header */
+
+            &.media {
+                .content {
+                    p {
+                        margin-bottom: 20.9375em;
+                    }
+
+                    img.photo {
+                        border-bottom-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                    }
+                }
+            } /* &.media */
         } /* END article.post */
 
         footer.wrapper {
@@ -204,7 +221,7 @@ main {
                 cursor: pointer;
             }
         }
-    } /* END container.body */
+    } /* END .container.body */
 } /* END main */
 
 /* ******************************************

@@ -85,6 +85,15 @@ main {
                 font-size: .9375em; /* 15px */
                 font-weight: 300;
                 line-height: 1.6em; /* 24px */
+
+                a {
+                    color: #bec3cc;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         } /* END article.post */
 
