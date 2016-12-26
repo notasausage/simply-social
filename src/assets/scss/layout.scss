@@ -232,6 +232,11 @@ footer.container {
             a {
                 display: block;
                 padding: .5em 0; /* Make links easier to tap */
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
