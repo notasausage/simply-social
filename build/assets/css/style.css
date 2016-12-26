@@ -288,76 +288,112 @@ header.container {
 /* ******************************************
     Main Content Area
 ****************************************** */
-main .container.hero {
-  background: #6ca6b5;
-  padding-top: 7.5em;
-  padding-bottom: 7.5em;
-  /* New Post input box */ }
-  main .container.hero div.new-post {
-    background: rgba(0, 178, 134, 0.7);
-    margin: 0 auto;
-    max-width: 35.9375em;
-    /* 575px */
-    padding: 2em;
-    /* 32px */ }
-    main .container.hero div.new-post input {
-      background: transparent;
-      border: 0;
-      display: block;
-      margin-bottom: .6em;
-      /* 18px */
-      padding: 0;
-      width: 100%; }
-    main .container.hero div.new-post button {
-      background: transparent;
-      border: 0;
-      cursor: pointer; }
-
-main .container.body {
-  padding-top: 0; }
-  main .container.body .wrapper {
-    margin: 0 auto;
-    max-width: 35.9375em;
-    /* 575px */ }
-  main .container.body header.wrapper {
-    margin-top: -2.875em;
-    /* Pull filter and view options up to hero image area */
-    margin-bottom: 3.125em;
-    /* 50px */ }
-    main .container.body header.wrapper ul,
-    main .container.body header.wrapper li {
-      display: inline-block; }
-    main .container.body header.wrapper ul li a {
-      display: block; }
-    main .container.body header.wrapper ul li.selected {
-      border-bottom: 0.25em solid #00B286; }
-    main .container.body header.wrapper ul li:hover {
-      border-bottom: 0.25em solid #00B286; }
-  main .container.body article.post {
-    border: 1px solid #dee1e5;
-    border-radius: 4px;
-    padding: 1.5em 1.5em 1.5em 5.25em;
-    position: relative; }
-    main .container.body article.post header img {
+main {
+  /* END .container.body */ }
+  main .container.hero {
+    background: #6ca6b5;
+    padding-top: 7.5em;
+    padding-bottom: 7.5em;
+    /* New Post input box */ }
+    main .container.hero div.new-post {
+      background: rgba(0, 178, 134, 0.7);
+      margin: 0 auto;
+      max-width: 35.9375em;
+      /* 575px */
+      padding: 2em;
+      /* 32px */ }
+      main .container.hero div.new-post input {
+        background: transparent;
+        border: 0;
+        display: block;
+        margin-bottom: .6em;
+        /* 18px */
+        padding: 0;
+        width: 100%; }
+      main .container.hero div.new-post button {
+        background: transparent;
+        border: 0;
+        cursor: pointer; }
+  main .container.body {
+    padding-top: 0;
+    /* END article.post */ }
+    main .container.body .wrapper {
+      margin: 0 auto;
+      max-width: 35.9375em;
+      /* 575px */ }
+    main .container.body header.wrapper {
+      margin-top: -2.875em;
+      /* Pull filter and view options up to hero image area */
+      margin-bottom: 3.125em;
+      /* 50px */ }
+      main .container.body header.wrapper ul,
+      main .container.body header.wrapper li {
+        display: inline-block; }
+      main .container.body header.wrapper ul li a {
+        display: block; }
+      main .container.body header.wrapper ul li.selected {
+        border-bottom: 0.25em solid #00B286; }
+      main .container.body header.wrapper ul li:hover {
+        border-bottom: 0.25em solid #00B286; }
+    main .container.body article.post {
+      border: 1px solid #dee1e5;
       border-radius: 4px;
-      height: 40px;
-      left: 1.5em;
-      position: absolute;
-      width: 40px; }
-    main .container.body article.post header button {
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-size: 13px 13px;
-      border: 0;
-      cursor: pointer;
-      height: 13px;
-      text-indent: -9999px;
-      width: 13px; }
-      main .container.body article.post header button.reply {
-        background-image: url("../img/icon-reply.png"); }
-      main .container.body article.post header button.like {
-        background-image: url("../img/icon-like.png"); }
+      margin-bottom: 1.5em;
+      padding: 1.5em 1.5em 1.5em 5.25em;
+      position: relative;
+      /* END header */
+      /* &.media */ }
+      main .container.body article.post header img {
+        border-radius: 4px;
+        height: 40px;
+        left: 1.5em;
+        position: absolute;
+        width: 40px; }
+      main .container.body article.post header h3 {
+        display: inline-block;
+        margin-bottom: .75em;
+        vertical-align: top; }
+      main .container.body article.post header ul,
+      main .container.body article.post header li {
+        display: inline-block; }
+      main .container.body article.post header ul {
+        float: right; }
+        main .container.body article.post header ul li {
+          margin-left: 1.25em;
+          vertical-align: top; }
+          main .container.body article.post header ul li.timestamp {
+            vertical-align: text-top; }
+      main .container.body article.post header button {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 13px 13px;
+        border: 0;
+        cursor: pointer;
+        height: 13px;
+        padding: .1875em;
+        text-indent: -9999px;
+        width: 13px; }
+        main .container.body article.post header button.reply {
+          background-image: url("../img/icon-reply.png"); }
+        main .container.body article.post header button.like {
+          background-image: url("../img/icon-like.png"); }
+      main .container.body article.post.media .content p {
+        margin-bottom: 20.9375em; }
+      main .container.body article.post.media .content img.photo {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        bottom: 0;
+        left: 0;
+        position: absolute; }
+    main .container.body footer.wrapper {
+      margin: 3.75em auto 7.75em;
+      text-align: center; }
+      main .container.body footer.wrapper button.load {
+        background: transparent;
+        border: 0;
+        cursor: pointer; }
 
+/* END main */
 /* ******************************************
     Page Footer
 ****************************************** */
@@ -379,73 +415,89 @@ footer.container {
       footer.container .wrapper li a {
         display: block;
         padding: .5em 0;
-        /* Make links easier to tap */ }
+        /* Make links easier to tap */
+        text-decoration: none; }
+        footer.container .wrapper li a:hover {
+          text-decoration: underline; }
 
 header.container input.search {
   color: #666;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 12px; }
 
-main .container.hero input::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #fff;
-  opacity: .5; }
-
-main .container.hero input::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #fff;
-  opacity: .5; }
-
-main .container.hero input:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #fff;
-  opacity: .5; }
-
-main .container.hero input:-moz-placeholder {
-  /* Firefox 18- */
-  color: #fff;
-  opacity: .5; }
-
-main .container.hero div.new-post input {
-  color: #fff;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.875em;
-  /* 30px */
-  font-weight: 200; }
-
-main .container.hero div.new-post button {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: .875em;
-  /* 14px */ }
-
-main .container.body header.wrapper li {
-  line-height: 1em; }
-  main .container.body header.wrapper li a {
+main {
+  /* .container.hero */
+  /* END .container.body */ }
+  main .container.hero input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: #fff;
+    opacity: .5; }
+  main .container.hero input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: .5; }
+  main .container.hero input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: .5; }
+  main .container.hero input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: .5; }
+  main .container.hero div.new-post input {
+    color: #fff;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.875em;
+    /* 30px */
+    font-weight: 200; }
+  main .container.hero div.new-post button {
+    color: rgba(255, 255, 255, 0.5);
     font-size: .875em;
-    /* 14px */
-    font-weight: 600;
-    line-height: 1em;
-    padding: 1em .5em;
-    text-decoration: none;
-    text-transform: uppercase; }
+    /* 14px */ }
+  main .container.body {
+    /* END article.post */ }
+    main .container.body header.wrapper li {
+      line-height: 1em; }
+      main .container.body header.wrapper li a {
+        color: #fff;
+        font-size: .875em;
+        /* 14px */
+        font-weight: 600;
+        line-height: 1em;
+        padding: 1em .5em;
+        text-decoration: none;
+        text-transform: uppercase; }
+    main .container.body article.post header h3 {
+      color: #3f454d;
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 1em; }
+    main .container.body article.post header li {
+      line-height: 1em; }
+      main .container.body article.post header li.timestamp {
+        color: #bec3cc;
+        font-size: .875em;
+        /* 14px */ }
+    main .container.body article.post p {
+      color: #70767f;
+      font-size: .9375em;
+      /* 15px */
+      font-weight: 300;
+      line-height: 1.6em;
+      /* 24px */ }
+      main .container.body article.post p a {
+        color: #bec3cc;
+        text-decoration: none; }
+        main .container.body article.post p a:hover {
+          text-decoration: underline; }
+    main .container.body footer.wrapper button.load {
+      color: #bec3cc;
+      font-size: .75em;
+      /* 12px */
+      font-weight: 400;
+      text-transform: uppercase; }
 
-main .container.body article.post header h3 {
-  color: #3f454d;
-  font-size: 1em;
-  font-weight: 300; }
-
-main .container.body article.post header span {
-  color: #bec3cc;
-  font-size: .875em;
-  /* 14px */ }
-
-main .container.body article.post p {
-  color: #70767f;
-  font-size: .9375em;
-  /* 15px */
-  font-weight: 300; }
-
+/* END main */
 /* ******************************************
     Page Footer
 ****************************************** */
