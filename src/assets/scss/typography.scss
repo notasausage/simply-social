@@ -66,12 +66,17 @@ main {
                 h3 {
                     color: #3f454d;
                     font-size: 1em;
-                    font-weight: 300;
+                    font-weight: 400;
+                    line-height: 1em;
                 }
 
-                span {
-                    color: #bec3cc;
-                    font-size: .875em; /* 14px */
+                li {
+                    line-height: 1em;
+
+                    &.timestamp {
+                        color: #bec3cc;
+                        font-size: .875em; /* 14px */
+                    }
                 }
             }
 
@@ -79,6 +84,7 @@ main {
                 color: #70767f;
                 font-size: .9375em; /* 15px */
                 font-weight: 300;
+                line-height: 1.6em; /* 24px */
             }
         }
     }

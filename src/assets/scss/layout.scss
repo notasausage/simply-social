@@ -148,6 +148,30 @@ main {
                     width: 40px;
                 }
 
+                h3 {
+                    display: inline-block;
+                    margin-bottom: .75em;
+                    vertical-align: top;
+                }
+
+                ul,
+                li {
+                    display: inline-block;
+                }
+
+                ul {
+                    float: right;
+
+                    li {
+                        margin-left: 1.25em;
+                        vertical-align: top;
+
+                        &.timestamp {
+                            vertical-align: text-top;
+                        }
+                    }
+                }
+
                 button {
                     background-color: transparent;
                     background-repeat: no-repeat;
@@ -155,6 +179,7 @@ main {
                     border: 0;
                     cursor: pointer;
                     height: 13px;
+                    padding: .1875em;
                     text-indent: -9999px;
                     width: 13px;
 
