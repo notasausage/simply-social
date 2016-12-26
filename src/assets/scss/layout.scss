@@ -67,7 +67,8 @@ header.container {
 ****************************************** */
 main {
     .container.hero {
-        background: #6ca6b5;
+        background: #6ca6b5 url( '../img/hero-vw-bus.jpg' ) no-repeat 50% 15%;
+        background-size: cover;
         padding-top: 7.5em;
         padding-bottom: 7.5em;
 
