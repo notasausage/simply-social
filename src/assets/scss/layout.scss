@@ -191,10 +191,21 @@ main {
                         background-image: url( '../img/icon-like.png' );
                     }
                 }
+            } /* END header */
+        } /* END article.post */
+
+        footer.wrapper {
+            margin: 3.75em auto 7.75em;
+            text-align: center;
+
+            button.load {
+                background: transparent;
+                border: 0;
+                cursor: pointer;
             }
         }
-    }
-}
+    } /* END container.body */
+} /* END main */
 
 /* ******************************************
     Page Footer

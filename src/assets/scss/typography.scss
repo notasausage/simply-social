@@ -42,7 +42,7 @@ main {
                 font-size: .875em; /* 14px */
             }
         }
-    }
+    } /* .container.hero */
 
     .container.body {
         header.wrapper {
@@ -86,9 +86,18 @@ main {
                 font-weight: 300;
                 line-height: 1.6em; /* 24px */
             }
+        } /* END article.post */
+
+        footer.wrapper {
+            button.load {
+                color: #bec3cc;
+                font-size: .75em; /* 12px */
+                font-weight: 400;
+                text-transform: uppercase;
+            }
         }
-    }
-}
+    } /* END .container.body */
+} /* END main */
 
 /* ******************************************
     Page Footer
