@@ -131,7 +131,7 @@ main {
             ul {
                 li {
                     margin-right: 2.5em;
-                    
+
                     a {
                         display: block;
                     }
@@ -152,11 +152,37 @@ main {
                 }
 
                 &.filters {
-
                 }
 
                 &.views {
                     right: 0;
+
+                    li {
+                        margin: 0;
+                        
+                        &.selected,
+                        &:hover {
+                            border-bottom: 0;
+                        }
+
+                        &.list a {
+                            background-image: url( '../img/icon-list.svg' );
+                        }
+
+                        &.grid a {
+                            background-image: url( '../img/icon-tile.svg' );
+                        }
+
+                        a {
+                            background-position: 50% 50%;
+                            background-repeat: no-repeat;
+                            background-size: .5625em .5625em;
+                            display: block;
+                            height: 2.875em; // 46px
+                            text-indent: -9999px;
+                            width: 2.875em; // 46px
+                        }
+                    }
                 }
             }
         }

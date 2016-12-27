@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6,6 L9,6 L9,9 L6,9 L6,6 Z M6,0 L9,0 L9,3 L6,3 L6,0 Z M0,0 L3,0 L3,3 L0,3 L0,0 Z M0,6 L3,6 L3,9 L0,9 L0,6 Z" id="icon-tile" fill="#FFFFFF"></path>
+    </g>
+</svg>
