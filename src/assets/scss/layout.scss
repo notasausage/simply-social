@@ -4,6 +4,8 @@
 header.container {
     background: $header-bar-color;
     color: #686e76;
+    position: relative;
+    z-index: 20;
 
     a.logo {
         background-image: url( '../img/logo-simply-social.png' );
@@ -43,6 +45,11 @@ header.container {
             border: 1px solid rgba( 255, 255, 255, .2 );
             border-radius: 4px;
             padding: .5em 30px .5em .5em;
+
+            &:focus {
+                border: 1px solid rgba( 255, 255, 255, .8 );
+                outline: none;
+            }
         }
 
         img.avatar {
@@ -76,6 +83,8 @@ main {
 
         // Hero background image
         img {
+            -webkit-filter: blur( 10px );
+            filter: blur( 10px );
             left: 0;
             position: absolute;
             top: 0;
@@ -98,6 +107,10 @@ main {
                 margin-bottom: .6em; /* 18px */
                 padding: 0;
                 width: 100%;
+
+                &:focus {
+                    outline: none;
+                }
             }
 
             button {
@@ -159,7 +172,7 @@ main {
 
                     li {
                         margin: 0;
-                        
+
                         &.selected,
                         &:hover {
                             border-bottom: 0;
