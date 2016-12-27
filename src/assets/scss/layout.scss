@@ -67,10 +67,20 @@ header.container {
 ****************************************** */
 main {
     .container.hero {
-        background: #6ca6b5 url( '../img/hero-vw-bus.jpg' ) no-repeat 50% 15%;
+        // background: #6ca6b5 url( '../img/hero-vw-bus.jpg' ) no-repeat 50% 15%;
+        background: #6ca6b5;
         background-size: cover;
         padding-top: 7.5em;
         padding-bottom: 7.5em;
+        position: relative;
+
+        // Hero background image
+        img {
+            left: 0;
+            position: absolute;
+            top: 0;
+            z-index: 5;
+        }
 
         /* New Post input box */
         div.new-post {
@@ -78,6 +88,8 @@ main {
             margin: 0 auto;
             max-width: 35.9375em; /* 575px */
             padding: 2em; /* 32px */
+            position: relative;
+            z-index: 15;
 
             input {
                 background: transparent;
@@ -97,16 +109,19 @@ main {
     }
 
     .container.body {
+        background: #fff;
         padding-top: 0;
+        position: relative;
+        z-index: 15;
 
         .wrapper {
             margin: 0 auto;
-            max-width: 35.9375em; /* 575px */
+            max-width: 35.9375em; // 575px
         }
 
         header.wrapper {
-            margin-top: -2.875em; /* Pull filter and view options up to hero image area */
-            margin-bottom: 3.125em; /* 50px */
+            // margin-top: -2.875em;
+            position: relative;
 
             ul,
             li {
@@ -115,6 +130,8 @@ main {
 
             ul {
                 li {
+                    margin-right: 2.5em;
+                    
                     a {
                         display: block;
                     }
@@ -127,11 +144,25 @@ main {
                         border-bottom: .25em solid $teal;
                     }
                 }
-            }
 
-            ul.filters {
+                &.filters,
+                &.views {
+                    position: absolute;
+                    top: -2.875em; // Pull filter and view options up to hero image area
+                }
 
+                &.filters {
+
+                }
+
+                &.views {
+                    right: 0;
+                }
             }
+        }
+
+        div.posts {
+            padding-top: 3.125em; // 50px
         }
 
         article.post {
@@ -210,6 +241,10 @@ main {
                     }
                 }
             } /* &.media */
+
+            // &:first-of-type {
+            //     margin-top: 3.125em; // 50px
+            // }
         } /* END article.post */
 
         footer.wrapper {
