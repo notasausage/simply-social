@@ -241,7 +241,9 @@ h1 {
 ****************************************** */
 header.container {
   background: #262728;
-  color: #686e76; }
+  color: #686e76;
+  position: relative;
+  z-index: 20; }
   header.container a.logo {
     background-image: url("../img/logo-simply-social.png");
     background-repeat: no-repeat;
@@ -273,6 +275,9 @@ header.container {
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 4px;
       padding: .5em 30px .5em .5em; }
+      header.container section.actions input.search:focus {
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        outline: none; }
     header.container section.actions img.avatar {
       border-radius: 4px;
       float: right;
@@ -292,16 +297,27 @@ main {
   /* END .container.body */ }
   main .container.hero {
     background: #6ca6b5;
+    background-size: cover;
     padding-top: 7.5em;
     padding-bottom: 7.5em;
+    position: relative;
     /* New Post input box */ }
+    main .container.hero img {
+      -webkit-filter: blur(10px);
+      filter: blur(10px);
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 5; }
     main .container.hero div.new-post {
       background: rgba(0, 178, 134, 0.7);
       margin: 0 auto;
       max-width: 35.9375em;
       /* 575px */
       padding: 2em;
-      /* 32px */ }
+      /* 32px */
+      position: relative;
+      z-index: 15; }
       main .container.hero div.new-post input {
         background: transparent;
         border: 0;
@@ -310,81 +326,145 @@ main {
         /* 18px */
         padding: 0;
         width: 100%; }
+        main .container.hero div.new-post input:focus {
+          outline: none; }
       main .container.hero div.new-post button {
         background: transparent;
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+        background-size: 18px 13px;
         border: 0;
-        cursor: pointer; }
+        cursor: pointer;
+        padding: 0 0 0 1.8571em; }
+        main .container.hero div.new-post button.add-photo {
+          background-image: url("../img/icon-camera.png");
+          margin-right: 2.8571em; }
+        main .container.hero div.new-post button.add-video {
+          background-image: url("../img/icon-video.png"); }
   main .container.body {
+    background: #fff;
     padding-top: 0;
-    /* END article.post */ }
+    position: relative;
+    z-index: 15; }
     main .container.body .wrapper {
       margin: 0 auto;
-      max-width: 35.9375em;
-      /* 575px */ }
+      max-width: 37.4375em; }
     main .container.body header.wrapper {
-      margin-top: -2.875em;
-      /* Pull filter and view options up to hero image area */
-      margin-bottom: 3.125em;
-      /* 50px */ }
+      position: relative; }
       main .container.body header.wrapper ul,
       main .container.body header.wrapper li {
         display: inline-block; }
-      main .container.body header.wrapper ul li a {
-        display: block; }
-      main .container.body header.wrapper ul li.selected {
-        border-bottom: 0.25em solid #00B286; }
-      main .container.body header.wrapper ul li:hover {
-        border-bottom: 0.25em solid #00B286; }
-    main .container.body article.post {
-      border: 1px solid #dee1e5;
-      border-radius: 4px;
-      margin-bottom: 1.5em;
-      padding: 1.5em 1.5em 1.5em 5.25em;
-      position: relative;
-      /* END header */
-      /* &.media */ }
-      main .container.body article.post header img {
-        border-radius: 4px;
-        height: 40px;
-        left: 1.5em;
+      main .container.body header.wrapper ul li {
+        margin-right: 2.5em; }
+        main .container.body header.wrapper ul li a {
+          display: block; }
+        main .container.body header.wrapper ul li.selected {
+          border-bottom: 0.25em solid #00B286; }
+        main .container.body header.wrapper ul li:hover {
+          border-bottom: 0.25em solid #00B286; }
+      main .container.body header.wrapper ul.filters, main .container.body header.wrapper ul.views {
         position: absolute;
-        width: 40px; }
-      main .container.body article.post header h3 {
-        display: inline-block;
-        margin-bottom: .75em;
-        vertical-align: top; }
-      main .container.body article.post header ul,
-      main .container.body article.post header li {
-        display: inline-block; }
-      main .container.body article.post header ul {
-        float: right; }
-        main .container.body article.post header ul li {
-          margin-left: 1.25em;
+        top: -2.875em; }
+      main .container.body header.wrapper ul.views {
+        right: 0; }
+        main .container.body header.wrapper ul.views li {
+          margin: 0; }
+          main .container.body header.wrapper ul.views li.selected, main .container.body header.wrapper ul.views li:hover {
+            border-bottom: 0; }
+          main .container.body header.wrapper ul.views li.list a {
+            background-image: url("../img/icon-list.svg"); }
+          main .container.body header.wrapper ul.views li.grid a {
+            background-image: url("../img/icon-tile.svg"); }
+          main .container.body header.wrapper ul.views li a {
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: .5625em .5625em;
+            display: block;
+            height: 2.875em;
+            text-indent: -9999px;
+            width: 2.875em; }
+    main .container.body div.posts {
+      padding-top: 3.125em; }
+      main .container.body div.posts article.wrapper {
+        margin-bottom: 1.5em;
+        position: relative; }
+        main .container.body div.posts article.wrapper .panel {
+          border: 1px solid #dee1e5;
+          border-radius: 4px; }
+        main .container.body div.posts article.wrapper header img {
+          border-radius: 4px;
+          height: 40px;
+          left: 1.5em;
+          position: absolute;
+          width: 40px; }
+        main .container.body div.posts article.wrapper header h3 {
+          display: inline-block;
+          margin-bottom: .75em;
           vertical-align: top; }
-          main .container.body article.post header ul li.timestamp {
-            vertical-align: text-top; }
-      main .container.body article.post header button {
-        background-color: transparent;
-        background-repeat: no-repeat;
-        background-size: 13px 13px;
-        border: 0;
-        cursor: pointer;
-        height: 13px;
-        padding: .1875em;
-        text-indent: -9999px;
-        width: 13px; }
-        main .container.body article.post header button.reply {
-          background-image: url("../img/icon-reply.png"); }
-        main .container.body article.post header button.like {
-          background-image: url("../img/icon-like.png"); }
-      main .container.body article.post.media .content p {
-        margin-bottom: 20.9375em; }
-      main .container.body article.post.media .content img.photo {
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        bottom: 0;
-        left: 0;
-        position: absolute; }
+        main .container.body div.posts article.wrapper header ul,
+        main .container.body div.posts article.wrapper header li {
+          display: inline-block; }
+        main .container.body div.posts article.wrapper header ul {
+          float: right; }
+          main .container.body div.posts article.wrapper header ul li {
+            margin-left: 1.25em;
+            vertical-align: top; }
+            main .container.body div.posts article.wrapper header ul li.timestamp {
+              vertical-align: text-top; }
+        main .container.body div.posts article.wrapper header button {
+          background-color: transparent;
+          background-repeat: no-repeat;
+          background-size: 13px 13px;
+          border: 0;
+          cursor: pointer;
+          height: 13px;
+          padding: .1875em;
+          text-indent: -9999px;
+          width: 13px; }
+          main .container.body div.posts article.wrapper header button.reply {
+            background-image: url("../img/icon-reply.png"); }
+          main .container.body div.posts article.wrapper header button.like {
+            background-image: url("../img/icon-like.png"); }
+        main .container.body div.posts article.wrapper .post,
+        main .container.body div.posts article.wrapper .comments {
+          position: relative; }
+        main .container.body div.posts article.wrapper .post {
+          padding: 1.5em 1.5em 1.5em 5.25em; }
+        main .container.body div.posts article.wrapper .comments {
+          background: #f4f5f7; }
+          main .container.body div.posts article.wrapper .comments .comment {
+            border-top: 1px solid #dee1e5;
+            padding: 1.5em 1.5em 1.5em 5.25em; }
+          main .container.body div.posts article.wrapper .comments .respond {
+            border-top: 1px solid #dee1e5;
+            padding: 1.5em; }
+            main .container.body div.posts article.wrapper .comments .respond input {
+              border: 1px solid #dee1e5;
+              border-radius: 4px;
+              font-size: .875em;
+              font-weight: 300;
+              padding: .8125em;
+              width: 100%; }
+        main .container.body div.posts article.wrapper footer {
+          margin-top: .75em; }
+          main .container.body div.posts article.wrapper footer button.toggle {
+            background: transparent url("../img/icon-arrow.png") no-repeat;
+            background-position: 100% 50%;
+            background-size: 7px 4px;
+            border: 0;
+            cursor: pointer;
+            outline: none;
+            padding: .5em 0;
+            text-align: left;
+            width: 5em; }
+        main .container.body div.posts article.wrapper.media .content p {
+          margin-bottom: 20.9375em; }
+        main .container.body div.posts article.wrapper.media .content img.photo {
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          bottom: 0;
+          left: 0;
+          position: absolute; }
     main .container.body footer.wrapper {
       margin: 3.75em auto 7.75em;
       text-align: center; }
@@ -451,9 +531,14 @@ main {
     /* 30px */
     font-weight: 200; }
   main .container.hero div.new-post button {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     font-size: .875em;
-    /* 14px */ }
+    /* 14px */
+    filter: alpha(Opacity=50);
+    opacity: .5; }
+    main .container.hero div.new-post button:hover {
+      filter: alpha(Opacity=100);
+      opacity: 1; }
   main .container.body {
     /* END article.post */ }
     main .container.body header.wrapper li {
@@ -467,29 +552,33 @@ main {
         padding: 1em .5em;
         text-decoration: none;
         text-transform: uppercase; }
-    main .container.body article.post header h3 {
+    main .container.body article.wrapper header h3 {
       color: #3f454d;
       font-size: 1em;
       font-weight: 400;
       line-height: 1em; }
-    main .container.body article.post header li {
+    main .container.body article.wrapper header li {
       line-height: 1em; }
-      main .container.body article.post header li.timestamp {
+      main .container.body article.wrapper header li.timestamp {
         color: #bec3cc;
         font-size: .875em;
         /* 14px */ }
-    main .container.body article.post p {
+    main .container.body article.wrapper p {
       color: #70767f;
       font-size: .9375em;
       /* 15px */
       font-weight: 300;
       line-height: 1.6em;
       /* 24px */ }
-      main .container.body article.post p a {
+      main .container.body article.wrapper p a {
         color: #bec3cc;
         text-decoration: none; }
-        main .container.body article.post p a:hover {
+        main .container.body article.wrapper p a:hover {
           text-decoration: underline; }
+    main .container.body article.wrapper button.toggle {
+      color: #bec3cc;
+      font-size: .75em;
+      font-weight: 300; }
     main .container.body footer.wrapper button.load {
       color: #bec3cc;
       font-size: .75em;

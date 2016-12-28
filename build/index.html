@@ -21,7 +21,7 @@
 
                 <h3 class="visuallyhidden">Search SimplySocial</h3>
                 <form method="get" name="form-search" id="form-search">
-                    <input type="text" name="search" class="search" />
+                    <input type="text" name="search" class="search" accesskey="s" />
                 </form>
 
                 <h3 class="visuallyhidden">Profile &amp; Settings</h3>
@@ -41,11 +41,12 @@
     <main>
         <section class="container hero">
             <h1 class="visuallyhidden">Home</h1>
+            <img src="assets/img/hero-vw-bus.jpg" alt="VW Bus" />
 
             <div class="new-post">
                 <h2 class="visuallyhidden">Create New Post</h2>
                 <form class="wrapper" method="post" name="form-post">
-                    <input type="text" name="post" id="input-post" placeholder="What&#8217;s on your mind?" />
+                    <input type="text" name="post" id="input-post" placeholder="What&#8217;s on your mind?" accesskey="p" autofocus />
                     <button class="add-photo">Add Photo</button>
                     <button class="add-video">Add Video</button>
                 </form>
@@ -69,53 +70,110 @@
 
                 <h2 class="visuallyhidden">Layout Options</h2>
                 <ul class="views">
-                    <li class="selected">
+                    <li class="selected list">
                         <a href="#list">List View</a>
                     </li>
-                    <li>
+                    <li class="grid">
                         <a href="#grid">Grid View</a>
                     </li>
                 </ul>
             </header>
 
-            <h2 class="visuallyhidden">Latest Posts</h2>
+            <div class="posts">
+                <h2 class="visuallyhidden">Latest Posts</h2>
 
-            <article class="wrapper post">
-                <header class="group">
-                    <img src="assets/img/avatar-sam.jpg" alt="Photo of Sam Soffes" />
-                    <h3>Sam Soffes</h3>
-                    <h4 class="visuallyhidden">Actions</h4>
-                    <ul>
-                        <li><button class="reply">Reply</button></li>
-                        <li><button class="like">Like</button></li>
-                        <li class="timestamp" title="3 minutes ago">3m</li>
-                    </ul>
-                </header>
-                <div class="content">
-                    <p>
-                        How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly</a> Good stuff from <a href="#">@designmodo</a>!
-                    </p>
-                </div>
-            </article>
+                <article class="wrapper">
+                    <div class="panel">
+                        <section class="post">
+                            <header class="group">
+                                <img src="assets/img/avatar-sam.jpg" alt="Photo of Sam Soffes" />
+                                <h3>Sam Soffes</h3>
+                                <h4 class="visuallyhidden">Actions</h4>
+                                <ul>
+                                    <li><button class="reply">Reply</button></li>
+                                    <li><button class="like">Like</button></li>
+                                    <li class="timestamp" title="3 minutes ago">3m</li>
+                                </ul>
+                            </header>
+                            <div class="content">
+                                <p>
+                                    How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly/1lE4uJc</a> Good stuff from <a href="#">@designmodo</a>!
+                                </p>
+                            </div>
+                            <footer>
+                                <button class="toggle" title="Hide All Comments">Collapse</button>
+                            </footer>
+                        </section>
 
-            <article class="wrapper post media">
-                <header class="group">
-                    <img src="assets/img/avatar-meg.jpg" alt="Photo of Meg Robichaud" />
-                    <h3>Meg Robichaud</h3>
-                    <h4 class="visuallyhidden">Actions</h4>
-                    <ul>
-                        <li><button class="reply">Reply</button></li>
-                        <li><button class="like">Like</button></li>
-                        <li class="timestamp" title="25 minutes ago">25m</li>
-                    </ul>
-                </header>
-                <div class="content">
-                    <p>
-                        My view this morning is simply beautiful... <a href="#">instagram.com/p/mV0PUrHRwQ/</a>
-                    </p>
-                    <img class="photo" src="assets/img/photo-ocean.jpg" alt="Photo from Instagram" />
-                </div>
-            </article>
+                        <section class="comments">
+                            <div class="comment" id="comment1">
+                                <header class="group">
+                                    <img src="assets/img/avatar-jed.jpg" alt="Photo of Jed Bridges" />
+                                    <h3>Jed Bridges</h3>
+                                    <h4 class="visuallyhidden">Actions</h4>
+                                    <ul>
+                                        <li><button class="reply">Reply</button></li>
+                                        <li><button class="like">Like</button></li>
+                                        <li class="timestamp" title="1 hour ago">1h</li>
+                                    </ul>
+                                </header>
+                                <div class="content">
+                                    <p>
+                                        Great way to start the week. Thanks for sharing!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="comment" id="comment2">
+                                <header class="group">
+                                    <img src="assets/img/avatar-ren.jpg" alt="Photo of Ren Walker" />
+                                    <h3>Ren Walker</h3>
+                                    <h4 class="visuallyhidden">Actions</h4>
+                                    <ul>
+                                        <li><button class="reply">Reply</button></li>
+                                        <li><button class="like">Like</button></li>
+                                        <li class="timestamp" title="1 hour ago">1h</li>
+                                    </ul>
+                                </header>
+                                <div class="content">
+                                    <p>
+                                        Feeling inspired now... thanks for the great article <a href="#">@designmodo</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="respond">
+                                <form method="post" action="comment.html" id="respond">
+                                    <input type="text" name="response" id="response" placeholder="Reply..." />
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="wrapper media">
+                    <div class="panel">
+                        <section class="post">
+                            <header class="group">
+                                <img src="assets/img/avatar-meg.jpg" alt="Photo of Meg Robichaud" />
+                                <h3>Meg Robichaud</h3>
+                                <h4 class="visuallyhidden">Actions</h4>
+                                <ul>
+                                    <li><button class="reply">Reply</button></li>
+                                    <li><button class="like">Like</button></li>
+                                    <li class="timestamp" title="25 minutes ago">25m</li>
+                                </ul>
+                            </header>
+                            <div class="content">
+                                <p>
+                                    My view this morning is simply beautiful... <a href="#">instagram.com/p/mV0PUrHRwQ/</a>
+                                </p>
+                                <img class="photo" src="assets/img/photo-ocean.jpg" alt="Photo from Instagram" />
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
 
             <footer class="wrapper">
                 <button class="load" title="Load More Posts">Load More</button>
