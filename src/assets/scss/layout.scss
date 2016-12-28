@@ -129,7 +129,7 @@ main {
 
         .wrapper {
             margin: 0 auto;
-            max-width: 35.9375em; // 575px
+            max-width: 37.4375em; // 599px, 575 max width + gutters
         }
 
         header.wrapper {
@@ -202,89 +202,123 @@ main {
 
         div.posts {
             padding-top: 3.125em; // 50px
-        }
 
-        article.post {
-            border: 1px solid #dee1e5;
-            border-radius: 4px;
-            margin-bottom: 1.5em;
-            padding: 1.5em 1.5em 1.5em 5.25em;
-            position: relative;
+            article.wrapper {
+                margin-bottom: 1.5em;
+                position: relative;
 
-            header {
-                img {
+                .panel {
+                    border: 1px solid #dee1e5;
                     border-radius: 4px;
-                    height: 40px;
-                    left: 1.5em;
-                    position: absolute;
-                    width: 40px;
                 }
 
-                h3 {
-                    display: inline-block;
-                    margin-bottom: .75em;
-                    vertical-align: top;
-                }
+                header {
+                    img {
+                        border-radius: 4px;
+                        height: 40px;
+                        left: 1.5em;
+                        position: absolute;
+                        width: 40px;
+                    }
 
-                ul,
-                li {
-                    display: inline-block;
-                }
-
-                ul {
-                    float: right;
-
-                    li {
-                        margin-left: 1.25em;
+                    h3 {
+                        display: inline-block;
+                        margin-bottom: .75em;
                         vertical-align: top;
+                    }
 
-                        &.timestamp {
-                            vertical-align: text-top;
+                    ul,
+                    li {
+                        display: inline-block;
+                    }
+
+                    ul {
+                        float: right;
+
+                        li {
+                            margin-left: 1.25em;
+                            vertical-align: top;
+
+                            &.timestamp {
+                                vertical-align: text-top;
+                            }
+                        }
+                    }
+
+                    button {
+                        background-color: transparent;
+                        background-repeat: no-repeat;
+                        background-size: 13px 13px;
+                        border: 0;
+                        cursor: pointer;
+                        height: 13px;
+                        padding: .1875em;
+                        text-indent: -9999px;
+                        width: 13px;
+
+                        &.reply {
+                            background-image: url( '../img/icon-reply.png' );
+                        }
+
+                        &.like {
+                            background-image: url( '../img/icon-like.png' );
+                        }
+                    }
+                } // END header
+
+                .post,
+                .comments {
+                    position: relative;
+                }
+
+                .post {
+                    padding: 1.5em 1.5em 1.5em 5.25em;
+                }
+
+                .comments {
+                    background: #f4f5f7;
+
+                    .comment {
+                        border-top: 1px solid #dee1e5;
+                        padding: 1.5em 1.5em 1.5em 5.25em;
+                    }
+
+                    .respond {
+                        border-top: 1px solid #dee1e5;
+                        padding: 1.5em;
+
+                        input {
+                            border: 1px solid #dee1e5;
+                            border-radius: 4px;
+                            font-size: .875em; // 14px
+                            font-weight: 300;
+                            padding: .8125em;
+                            width: 100%;
                         }
                     }
                 }
 
-                button {
-                    background-color: transparent;
-                    background-repeat: no-repeat;
-                    background-size: 13px 13px;
-                    border: 0;
-                    cursor: pointer;
-                    height: 13px;
-                    padding: .1875em;
-                    text-indent: -9999px;
-                    width: 13px;
+                &.media {
+                    .content {
+                        p {
+                            margin-bottom: 20.9375em;
+                        }
 
-                    &.reply {
-                        background-image: url( '../img/icon-reply.png' );
+                        img.photo {
+                            border-bottom-left-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                            bottom: 0;
+                            left: 0;
+                            position: absolute;
+                        }
                     }
+                } // END &.media
 
-                    &.like {
-                        background-image: url( '../img/icon-like.png' );
-                    }
-                }
-            } /* END header */
-
-            &.media {
-                .content {
-                    p {
-                        margin-bottom: 20.9375em;
-                    }
-
-                    img.photo {
-                        border-bottom-left-radius: 4px;
-                        border-bottom-right-radius: 4px;
-                        bottom: 0;
-                        left: 0;
-                        position: absolute;
-                    }
-                }
-            } /* &.media */
-
-            // &:first-of-type {
-            //     margin-top: 3.125em; // 50px
-            // }
-        } /* END article.post */
+                // &:first-of-type {
+                //     margin-top: 3.125em; // 50px
+                // }
+            } // END article.wrapper
+        } // END div.posts
 
         footer.wrapper {
             margin: 3.75em auto 7.75em;
