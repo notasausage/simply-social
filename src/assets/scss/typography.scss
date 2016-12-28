@@ -38,8 +38,16 @@ main {
             }
 
             button {
-                color: rgba( 255, 255, 255, .5 );
+                // color: rgba( 255, 255, 255, .5 );
+                color: #fff;
                 font-size: .875em; /* 14px */
+                filter: alpha( Opacity=50 );
+                opacity: .5;
+
+                &:hover {
+                    filter: alpha( Opacity=100 );
+                    opacity: 1;
+                }
             }
         }
     } /* .container.hero */

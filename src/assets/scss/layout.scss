@@ -115,8 +115,21 @@ main {
 
             button {
                 background: transparent;
+                background-position: 0 50%;
+                background-repeat: no-repeat;
+                background-size: 18px 13px;
                 border: 0;
                 cursor: pointer;
+                padding: 0 0 0 1.8571em; // 26px
+
+                &.add-photo {
+                    background-image: url( '../img/icon-camera.png' );
+                    margin-right: 2.8571em; // 40px
+                }
+
+                &.add-video {
+                    background-image: url( '../img/icon-video.png' );
+                }
             }
         }
     }
