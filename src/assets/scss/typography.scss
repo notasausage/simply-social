@@ -95,6 +95,12 @@ main {
                     }
                 }
             }
+
+            button.toggle {
+                color: #bec3cc;
+                font-size: .75em; // 12px
+                font-weight: 300;
+            }
         } /* END article.post */
 
         footer.wrapper {

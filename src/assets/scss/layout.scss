@@ -296,7 +296,23 @@ main {
                             width: 100%;
                         }
                     }
-                }
+                } // END .comments
+
+                footer {
+                    margin-top: .75em;
+
+                    button.toggle {
+                        background: transparent url( '../img/icon-arrow.png' ) no-repeat;
+                        background-position: 100% 50%;
+                        background-size: 7px 4px;
+                        border: 0;
+                        cursor: pointer;
+                        outline: none;
+                        padding: .5em 0;
+                        text-align: left;
+                        width: 5em;
+                    }
+                } // END footer
 
                 &.media {
                     .content {
