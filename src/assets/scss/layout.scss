@@ -34,17 +34,28 @@ header.container {
             border: 0;
             cursor: pointer;
             height: 26px;
-            margin-right: 1.5em;
+            margin-right: 1em;
             text-indent: -9999px;
             width: 31px;
+
+            @include medium {
+                margin-right: 1.5em;
+            }
         }
 
         input.search {
-            background: transparent url( '../img/icon-search.png' ) no-repeat 95% 50%;
+            background: transparent url( '../img/icon-search.png' ) no-repeat;
+            background-position: 50% 50%;
             background-size: 16px 16px;
             border: 1px solid rgba( 255, 255, 255, .2 );
             border-radius: 4px;
-            padding: .5em 30px .5em .5em;
+            padding: .5em 1.875em .5em .5em;
+            width: 3em;
+
+            @include medium {
+                background-position: 95% 50%;
+                width: 16.6667em;
+            }
 
             &:hover {
                 border-color: rgba( 255, 255, 255, .5 );
@@ -60,8 +71,12 @@ header.container {
             border-radius: 4px;
             float: right;
             height: 30px;
-            margin-left: 1.5em;
+            margin-left: 1em;
             width: 30px;
+
+            @include medium {
+                margin-left: 1.5em;
+            }
         }
 
         ul.profile {
@@ -81,9 +96,14 @@ main {
         // background: #6ca6b5 url( '../img/hero-vw-bus.jpg' ) no-repeat 50% 15%;
         background: #6ca6b5;
         background-size: cover;
-        padding-top: 7.5em;
-        padding-bottom: 7.5em;
+        padding-top: 3.5em;
+        padding-bottom: 3.5em;
         position: relative;
+
+        @include medium {
+            padding-top: 7.5em;
+            padding-bottom: 7.5em;
+        }
 
         // Hero background image
         img {
@@ -128,7 +148,11 @@ main {
 
                 &.add-photo {
                     background-image: url( '../img/icon-camera.png' );
-                    margin-right: 2.8571em; // 40px
+                    margin-right: 1.4286em; // 20px
+
+                    @include medium {
+                        margin-right: 2.8571em; // 40px
+                    }
                 }
 
                 &.add-video {
@@ -160,7 +184,11 @@ main {
 
             ul {
                 li {
-                    margin-right: 2.5em;
+                    margin-right: 1em;
+
+                    @include medium {
+                        margin-right: 2.5em;
+                    }
 
                     a {
                         display: block;
@@ -179,9 +207,6 @@ main {
                 &.views {
                     position: absolute;
                     top: -2.875em; // Pull filter and view options up to hero image area
-                }
-
-                &.filters {
                 }
 
                 &.views {
@@ -218,7 +243,11 @@ main {
         }
 
         div.posts {
-            padding-top: 3.125em; // 50px
+            padding-top: 1.5em; // 24px
+
+            @include medium {
+                padding-top: 3.125em; // 50px
+            }
 
             article.wrapper {
                 margin-bottom: 1.5em;

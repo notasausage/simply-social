@@ -6,3 +6,36 @@ $light-grey: #bec3cc;
 $header-bar-color: #262728;
 
 $font-primary: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+
+$medium-screen: 600px;
+$large-screen: 800px;
+
+// @mixin medium {
+//     @media( min-width: #{$medium-screen} ) and ( max-width: #{$large-screen - 1px} ) {
+//         @content;
+//     }
+// }
+
+@mixin medium {
+    @media( min-width: #{$medium-screen} ) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media( min-width: #{large-screen} ) {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media
+    only screen and ( -webkit-min-device-pixel-ratio: 2 ),
+    only screen and ( min--moz-device-pixel-ratio: 2 ),
+    only screen and ( -o-min-device-pixel-ratio: 2/1 ),
+    only screen and ( min-device-pixel-ratio: 2 ),
+    only screen and ( min-resolution: 192dpi ),
+    only screen and ( min-resolution: 2dppx ) {
+        @content;
+    }
+}
