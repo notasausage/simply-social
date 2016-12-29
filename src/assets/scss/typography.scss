@@ -62,9 +62,19 @@ main {
                     font-size: .875em; /* 14px */
                     font-weight: 600;
                     line-height: 1em;
+                    filter: alpha( Opacity=50 );
+                    opacity: .5;
                     padding: 1em .5em;
                     text-decoration: none;
                     text-transform: uppercase;
+                }
+
+                &.selected,
+                &:hover {
+                    a {
+                        filter: alpha( Opacity=100 );
+                        opacity: 1;
+                    }
                 }
             }
         }
