@@ -46,6 +46,10 @@ header.container {
             border-radius: 4px;
             padding: .5em 30px .5em .5em;
 
+            &:hover {
+                border-color: rgba( 255, 255, 255, .5 );
+            }
+
             &:focus {
                 border: 1px solid $teal;
                 outline: none;
