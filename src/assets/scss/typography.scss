@@ -1,6 +1,6 @@
 header.container {
     input.search {
-        color: #666;
+        color: #999;
         font-family: $font-primary;
         font-size: 12px;
     }
@@ -9,22 +9,22 @@ header.container {
 main {
     .container.hero {
         // Style placeholder text for New Post box input
-        input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        input::-webkit-input-placeholder { // Chrome, Opera and Safari
             color: #fff;
             opacity: .5;
         }
 
-        input::-moz-placeholder { /* Firefox 19+ */
+        input::-moz-placeholder { // Firefox 19+
             color: #fff;
             opacity: .5;
         }
 
-        input:-ms-input-placeholder { /* IE 10+ */
+        input:-ms-input-placeholder { // IE 10+
             color: #fff;
             opacity: .5;
         }
 
-        input:-moz-placeholder { /* Firefox 18- */
+        input:-moz-placeholder { // Firefox 18-
             color: #fff;
             opacity: .5;
         }
@@ -118,6 +118,29 @@ main {
                 color: #bec3cc;
                 font-size: .75em; // 12px
                 font-weight: 300;
+            }
+
+            .respond {
+                input {
+                    font-size: .875em; // 14px
+                    font-weight: 300;
+
+                    input::-webkit-input-placeholder { // Chrome, Opera and Safari
+                        color: $light-grey;
+                    }
+
+                    input::-moz-placeholder { // Firefox 19+
+                        color: $light-grey;
+                    }
+
+                    input:-ms-input-placeholder { // IE 10+
+                        color: $light-grey;
+                    }
+
+                    input:-moz-placeholder { // Firefox 18-
+                        color: $light-grey;
+                    }
+                }
             }
         } /* END article.post */
 
