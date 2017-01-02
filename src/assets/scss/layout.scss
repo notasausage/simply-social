@@ -286,8 +286,12 @@ main {
                             float: right;
 
                             li {
-                                margin-left: 1.25em;
+                                margin-left: .75em;
                                 vertical-align: top;
+
+                                @include medium {
+                                    margin-left: 1.25em;
+                                }
 
                                 &.timestamp {
                                     vertical-align: text-top;
