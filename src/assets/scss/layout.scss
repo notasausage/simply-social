@@ -347,6 +347,7 @@ main {
 
                     .comments {
                         background: #f4f5f7;
+                        display: none;
 
                         .comment {
                             border-top: 1px solid #dee1e5;
@@ -375,21 +376,58 @@ main {
                         } // END .respond
                     } // END .comments
 
-                    footer {
-                        margin: 0 1.25em 1em 5.25em;
+                    // Hide checkbox input
+                    .toggle-input {
+                        display: none;
 
-                        button.toggle {
+                        &:checked {
+                            // Show comments when checkbox is checked
+                            ~ .comments {
+                                display: block;
+                            }
+
+                            // Change label to "Collapse" when comments are shown
+                            ~ label:before {
+                                content: "Collapse";
+                            }
+
+                            // Flip arrow to indicate collapsing comments
+                            ~ label:after {
+                                -moz-transform: scaleY(-1);
+                                -o-transform: scaleY(-1);
+                                -webkit-transform: scaleY(-1);
+                                -ms-transform: scaleY(-1);
+                                transform: scaleY(-1);
+                                -ms-filter: "FlipV";
+                                filter: FlipV;
+                            }
+                        }
+                    }
+
+                    // Style label as button
+                    .toggle-label {
+                        border: 0;
+                        cursor: pointer;
+                        display: block;
+                        margin: 0 1.25em 1em 7em; // 84px left margin
+                        padding: .5em 0;
+                        text-align: left;
+                        user-select: none;
+                        width: 5em;
+
+                        &:before {
+                            content: "Expand";
+                        }
+
+                        &:after {
                             background: transparent url( '../img/icon-arrow.png' ) no-repeat;
                             background-position: 100% 50%;
                             background-size: 7px 4px;
-                            border: 0;
-                            cursor: pointer;
-                            outline: none;
-                            padding: .5em 0;
-                            text-align: left;
-                            width: 5em;
+                            content: "\00a0";
+                            display: inline-block;
+                            width: 10px;
                         }
-                    } // END footer
+                    }
                 } // END .panel
 
                 &.media {
