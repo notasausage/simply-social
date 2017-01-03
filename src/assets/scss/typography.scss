@@ -4,6 +4,15 @@ header.container {
         font-family: $font-primary;
         font-size: 12px;
     }
+
+    ul.profile-menu {
+        li {
+            a {
+                font-size: .75em;
+                line-height: 2.5em;
+            }
+        }
+    }
 }
 
 main {

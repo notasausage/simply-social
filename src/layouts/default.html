@@ -25,10 +25,12 @@
                 </form>
 
                 <h3 class="visuallyhidden">Profile &amp; Settings</h3>
-                <a href="#">
+                <input type="checkbox" value="selected" id="profile-options" class="toggle-input">
+                <label for="profile-options" class="toggle-label" onclick>
                     <img src="assets/img/avatar-patrick.jpg" alt="Your Photo" class="avatar" />
-                </a>
-                <ul class="profile">
+                </label>
+                
+                <ul class="profile-menu">
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Followers</a></li>
                     <li><a href="#">Following</a></li>
@@ -104,7 +106,6 @@
 
                         <input type="checkbox" value="selected" id="post1-comments" class="toggle-input">
                         <label for="post1-comments" class="toggle-label" onclick>&nbsp;</label>
-                        <!-- <button class="toggle" title="Hide All Comments">Collapse</button> -->
 
                         <section class="comments">
                             <div class="comment" id="comment1">

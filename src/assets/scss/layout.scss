@@ -80,26 +80,97 @@ header.container {
             }
         }
 
-        img.avatar {
-            border-radius: 4px;
-            float: right;
-            height: 30px;
-            margin-left: 1em;
-            width: 30px;
+        .toggle-input {
+            display: none;
 
-            @include medium {
-                margin-left: 1.5em;
+            &:checked {
+                // Show profile menu when checkbox is checked
+                ~ .profile-menu {
+                    display: block;
+                }
+
+                // Flip arrow to indicate menu hide click
+                ~ label:before {
+                    -moz-transform: scaleY(-1);
+                    -o-transform: scaleY(-1);
+                    -webkit-transform: scaleY(-1);
+                    -ms-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                    -ms-filter: "FlipV";
+                    filter: FlipV;
+                }
             }
         }
 
-        ul.profile {
+        // Style label as button
+        .toggle-label {
+            cursor: pointer;
+
+            img.avatar {
+                border-radius: 4px;
+                float: right;
+                height: 30px;
+                margin-left: 1em;
+                width: 30px;
+
+                @include medium {
+                    margin-left: 1.5em;
+                }
+            }
+
+            &:before {
+                background: transparent url( '../img/icon-arrow.png' ) no-repeat;
+                background-position: 100% 50%;
+                background-size: 7px 4px;
+                content: "\00a0";
+                display: inline-block;
+                float: right;
+                height: 1.875em;
+                width: 1.125em;
+            }
+        }
+
+        ul.profile-menu {
+            background: #f4f5f7;
+            border-radius: 4px;
             display: none;
             position: absolute;
-            right: 2em;
-            top: 2em;
+            right: -1em;
+            top: 2.5em;
+            width: 6.25em;
+
+            li {
+                a {
+                    border-bottom: 1px solid #dee1e5;
+                    color: #70767f;
+                    display: block;
+                    padding: 0 1.25em;
+                    text-decoration: none;
+
+                    &:hover {
+                        background: rgba( 255, 255, 255, 1 );
+                    }
+                }
+
+                &:first-child a {
+                    &:hover {
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                    }
+                }
+
+                &:last-child a {
+                    border: 0;
+
+                    &:hover {
+                        border-bottom-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                    }
+                }
+            }
         }
-    }
-}
+    } // .actions
+} // header.container
 
 /* ******************************************
     Main Content Area
