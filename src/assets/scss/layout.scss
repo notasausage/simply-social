@@ -22,14 +22,14 @@ header.container {
         float: right;
         position: relative;
 
-        button.new,
+        a.new,
         #form-search,
         input.search,
         img.avatar {
             display: inline-block;
         }
 
-        button.new {
+        a.new {
             background: transparent url( '../img/icon-new-post.png' ) no-repeat;
             background-size: contain;
             border: 0;
@@ -243,7 +243,17 @@ main {
                     background-image: url( '../img/icon-video.png' );
                 }
             }
-        }
+
+            &:target {
+                background: rgba( 0, 178, 134, 1 );
+                pointer-events: auto;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        } // END .new-post
     }
 
     .container.body {
@@ -562,5 +572,35 @@ footer.container {
                 }
             }
         }
+    } // END .wrapper
+
+    a.close {
+        display: block;
     }
+
+    .modal {
+        background: rgba( 0, 0, 0, 0.8 );
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+
+        > article {
+            background: #dee1e6;
+            cursor: default;
+            margin: 10vh auto;
+            position: relative;
+            width: 50vw;
+            z-index: 30;
+        }
+
+        &:target {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 20;
+        }
+    } // END .modal
 }
