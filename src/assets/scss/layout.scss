@@ -590,11 +590,69 @@ footer.container {
 
         > article {
             background: #dee1e6;
+            border-radius: 4px;
             cursor: default;
-            margin: 10vh auto;
+            margin: 20vh auto;
+            padding: 1em 2em;
             position: relative;
             width: 50vw;
             z-index: 30;
+
+            h3 {
+                margin-bottom: 1em;
+            }
+
+            textarea {
+                border: 0;
+                height: 4em;
+                margin-bottom: .3em;
+                padding: .25em;
+                width: 100%;
+            }
+
+            button {
+                background: transparent;
+                background-position: 0 50%;
+                background-repeat: no-repeat;
+                background-size: 18px 13px;
+                border: 0;
+                cursor: pointer;
+                height: 2.7143em; // 38px to match submit button
+                padding: 0 0 0 1.8571em; // 26px
+
+                &.add-photo {
+                    background-image: url( '../img/icon-camera-grey.png' );
+                    margin-right: 1.4286em; // 20px
+
+                    @include medium {
+                        margin-right: 2.8571em; // 40px
+                    }
+                }
+
+                &.add-video {
+                    background-image: url( '../img/icon-video-grey.png' );
+                }
+            }
+
+            input[type="submit"] {
+                background: #1bb087;
+                border: 0;
+                border-radius: 4px;
+                float: right;
+                cursor: pointer;
+                padding: .85em 1.75em;
+            }
+
+            a.close {
+                position: absolute;
+                top: -25px;
+                right: -25px;
+
+                img {
+                    height: 21px;
+                    width: 21px;
+                }
+            }
         }
 
         &:target {

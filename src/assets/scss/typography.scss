@@ -51,7 +51,6 @@ main {
             }
 
             button {
-                // color: rgba( 255, 255, 255, .5 );
                 color: #fff;
                 font-size: .875em; // 14px
                 filter: alpha( Opacity=50 );
@@ -172,13 +171,48 @@ main {
     Page Footer
 ****************************************** */
 footer.container {
-    color: #70767f;
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
+    .wrapper {
+        color: #70767f;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
 
-    a,
-    a:visited {
-        color: $teal;
+        a,
+        a:visited {
+            color: $teal;
+        }
+    }
+
+    .modal {
+        article {
+            h3 {
+                color: #878b94;
+                font-size: 1em;
+                text-transform: none;
+            }
+
+            textarea {
+                font-size: 1.5em;
+            }
+
+            button {
+                color: #4A4A4A;
+                font-size: .875em; // 14px
+                filter: alpha( Opacity=50 );
+                opacity: .5;
+
+                &:hover {
+                    filter: alpha( Opacity=100 );
+                    opacity: 1;
+                }
+            }
+
+            input[type="submit"] {
+                color: #fff;
+                font-size: .875em; // 14px
+                font-weight: 600;
+                line-height: 1em;
+            }
+        }
     }
 }

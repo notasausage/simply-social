@@ -198,19 +198,22 @@
             </p>
         </section>
 
-        <a href="#close" class="close" title="Close Window">
+        <!-- <a href="#close" class="close" title="Close Window"> -->
             <div class="modal" id="new">
                 <article>
-                    <h3>Create New Message</h3>
-                    <form method="post" name="form-post">
+                    <h3>Create new message</h3>
+                    <form method="post" name="form-post" class="group">
                         <textarea id="post-text" name="post-text"></textarea>
                         <button class="add-photo">Add Photo</button>
                         <button class="add-video">Add Video</button>
                         <input type="submit" name="submit" value="Post" />
                     </form>
+                    <a href="#close" title="Close Window" class="close">
+                        <img src="assets/img/icon-close.png" alt="Close" />
+                    </a>
                 </article>
             </div>
-        </a>
+        <!-- </a> -->
     </footer>
 </body>
 </html>
