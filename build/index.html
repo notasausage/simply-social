@@ -1,4 +1,5 @@
 <!doctype html>
+<html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -10,26 +11,28 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body class="home-page">
     <header class="container">
         <h2 class="visuallyhidden">Primary Navigation</h2>
         <nav class="wrapper group">
             <a href="/" class="logo" title="SimplySocial">SimplySocial</a>
-
+    
             <section class="actions">
-                <button class="new" title="Create New Post">New Post</button>
-
+                <a href="#new" class="new" title="Create New Post">New Post</a>
+    
                 <h3 class="visuallyhidden">Search SimplySocial</h3>
                 <form method="get" name="form-search" id="form-search">
                     <input type="text" name="search" class="search" accesskey="s" />
                 </form>
-
+    
                 <h3 class="visuallyhidden">Profile &amp; Settings</h3>
-                <a href="#">
+                <input type="checkbox" value="selected" id="profile-options" class="toggle-input">
+                <label for="profile-options" class="toggle-label" onclick>
                     <img src="assets/img/avatar-patrick.jpg" alt="Your Photo" class="avatar" />
-                </a>
-                <ul class="profile">
-                    <li><a href="#">Profile</a></li>
+                </label>
+    
+                <ul class="profile-menu">
+                    <li><a href="profile.html">Profile</a></li>
                     <li><a href="#">Followers</a></li>
                     <li><a href="#">Following</a></li>
                     <li><a href="#">Settings</a></li>
@@ -37,15 +40,16 @@
             </section>
         </nav>
     </header>
+    
 
     <main>
         <section class="container hero">
             <h1 class="visuallyhidden">Home</h1>
-            <img src="assets/img/hero-vw-bus.jpg" alt="VW Bus" />
+            <img src="assets/img/hero-vw-bus.jpg" alt="VW Bus" class="bg" />
 
-            <div class="new-post">
+            <div class="new-post wrapper">
                 <h2 class="visuallyhidden">Create New Post</h2>
-                <form class="wrapper" method="post" name="form-post">
+                <form method="post" name="form-post">
                     <input type="text" name="post" id="input-post" placeholder="What&#8217;s on your mind?" accesskey="p" autofocus />
                     <button class="add-photo">Add Photo</button>
                     <button class="add-video">Add Video</button>
@@ -71,10 +75,10 @@
                 <h2 class="visuallyhidden">Layout Options</h2>
                 <ul class="views">
                     <li class="selected list">
-                        <a href="#list">List View</a>
+                        <a href="#list" title="List View">List View</a>
                     </li>
                     <li class="grid">
-                        <a href="#grid">Grid View</a>
+                        <a href="#grid" title="Grid View">Grid View</a>
                     </li>
                 </ul>
             </header>
@@ -100,10 +104,10 @@
                                     How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly/1lE4uJc</a> Good stuff from <a href="#">@designmodo</a>!
                                 </p>
                             </div>
-                            <footer>
-                                <button class="toggle" title="Hide All Comments">Collapse</button>
-                            </footer>
                         </section>
+
+                        <input type="checkbox" value="selected" id="post1-comments" class="toggle-input">
+                        <label for="post1-comments" class="toggle-label" onclick>&nbsp;</label>
 
                         <section class="comments">
                             <div class="comment" id="comment1">
@@ -194,6 +198,24 @@
                 &copy;2016 SimplySocial
             </p>
         </section>
+    
+        <!-- <a href="#close" class="close" title="Close Window"> -->
+            <div class="modal" id="new">
+                <article>
+                    <h3>Create new message</h3>
+                    <form method="post" name="form-post" class="group">
+                        <textarea id="post-text" name="post-text"></textarea>
+                        <button class="add-photo">Add Photo</button>
+                        <button class="add-video">Add Video</button>
+                        <input type="submit" name="submit" value="Post" />
+                    </form>
+                    <a href="#close" title="Close Window" class="close">
+                        <img src="assets/img/icon-close.png" alt="Close" />
+                    </a>
+                </article>
+            </div>
+        <!-- </a> -->
     </footer>
+    
 </body>
 </html>
