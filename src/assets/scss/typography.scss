@@ -61,8 +61,40 @@ main {
                     opacity: 1;
                 }
             }
+        } // END .new-post
+
+        div.profile-info {
+            h3,
+            h4 {
+                color: #fff;
+            }
+
+            h3 {
+                font-size: 1.75em;
+                font-weight: 400;
+            }
+
+            h4 {
+                font-size: 1em;
+                font-weight: 300;
+            }
+
+            h5 {
+                font-size: .875em;
+                font-weight: 400;
+
+                a {
+                    color: rgba( 0, 0, 0, .5 );
+                    text-decoration: none;
+
+                    &:hover {
+                        color: rgba( 0, 0, 0, .8 );
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
-    } /* .container.hero */
+    } // END .container.hero
 
     .container.body {
         header.wrapper {

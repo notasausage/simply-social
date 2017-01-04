@@ -190,7 +190,7 @@ main {
         }
 
         // Hero background image
-        img {
+        img.bg {
             -webkit-filter: blur( 10px );
             filter: blur( 10px );
             left: 0;
@@ -199,12 +199,12 @@ main {
             z-index: 5;
         }
 
-        /* New Post input box */
+        // New Post input box
         div.new-post {
             background: rgba( 0, 178, 134, .7 );
             margin: 0 auto;
-            max-width: 35.9375em; /* 575px */
-            padding: 2em; /* 32px */
+            max-width: 35.9375em; // 575px
+            padding: 2em; // 32px
             position: relative;
             z-index: 15;
 
@@ -254,6 +254,25 @@ main {
                 bottom: 0;
             }
         } // END .new-post
+
+        // Profile page header
+        div.profile-info {
+            margin: 0 auto;
+            max-width: 35.9375em; // 575px
+            position: relative;
+            text-align: center;
+            z-index: 15;
+
+            img {
+                border-radius: 4px;
+                height: 90px;
+                width: 90px;
+            }
+
+            h4 {
+                margin-bottom: .25em;
+            }
+        }
     }
 
     .container.body {
