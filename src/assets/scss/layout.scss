@@ -314,6 +314,10 @@ main {
                     &:hover {
                         border-bottom: .25em solid $teal;
                     }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
                 }
 
                 &.filters,
@@ -684,4 +688,14 @@ footer.container {
             z-index: 20;
         }
     } // END .modal
+}
+
+/* ******************************************
+    Page Specific Styles
+****************************************** */
+body.profile-page {
+    ul.filters {
+        text-align: center;
+        width: 100%;
+    }
 }
