@@ -595,8 +595,12 @@ footer.container {
             margin: 20vh auto;
             padding: 1em 2em;
             position: relative;
-            width: 50vw;
+            width: 80vw;
             z-index: 30;
+
+            @include medium {
+                width: 50vw;
+            }
 
             h3 {
                 margin-bottom: 1em;

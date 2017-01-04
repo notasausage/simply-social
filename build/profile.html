@@ -12,8 +12,36 @@
 </head>
 
 <body>
-    {{> header}}
-
+    <header class="container">
+        <h2 class="visuallyhidden">Primary Navigation</h2>
+        <nav class="wrapper group">
+            <a href="/" class="logo" title="SimplySocial">SimplySocial</a>
+    
+            <section class="actions">
+                <a href="#new" class="new" title="Create New Post">New Post</a>
+    
+                <h3 class="visuallyhidden">Search SimplySocial</h3>
+                <form method="get" name="form-search" id="form-search">
+                    <input type="text" name="search" class="search" accesskey="s" />
+                </form>
+    
+                <h3 class="visuallyhidden">Profile &amp; Settings</h3>
+                <input type="checkbox" value="selected" id="profile-options" class="toggle-input">
+                <label for="profile-options" class="toggle-label" onclick>
+                    <img src="assets/img/avatar-patrick.jpg" alt="Your Photo" class="avatar" />
+                </label>
+    
+                <ul class="profile-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Followers</a></li>
+                    <li><a href="#">Following</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    
+    
     <main>
         <section class="container hero">
             <h1 class="visuallyhidden">Home</h1>
@@ -157,6 +185,37 @@
         </section>
     </main>
 
-    {{> footer}}
+    <footer class="container">
+        <section class="wrapper">
+            <h2 class="visuallyhidden">About SimplySocial</h2>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+            <p>
+                &copy;2016 SimplySocial
+            </p>
+        </section>
+    
+        <!-- <a href="#close" class="close" title="Close Window"> -->
+            <div class="modal" id="new">
+                <article>
+                    <h3>Create new message</h3>
+                    <form method="post" name="form-post" class="group">
+                        <textarea id="post-text" name="post-text"></textarea>
+                        <button class="add-photo">Add Photo</button>
+                        <button class="add-video">Add Video</button>
+                        <input type="submit" name="submit" value="Post" />
+                    </form>
+                    <a href="#close" title="Close Window" class="close">
+                        <img src="assets/img/icon-close.png" alt="Close" />
+                    </a>
+                </article>
+            </div>
+        <!-- </a> -->
+    </footer>
+    
 </body>
 </html>
