@@ -40,6 +40,7 @@ gulp.task( 'build',
         'cleanBuild',
         json,
         ie,
+        js,
         pages,
         scss,
         images
@@ -116,6 +117,12 @@ function json() {
         .pipe( gulp.dest( 'src/data' ) );
 }
 
+// Move JavaScript iles from asset folder to build
+function js() {
+    return gulp.src( 'src/assets/js/*' )
+        .pipe( gulp.dest( './build/assets/js/' ) );
+}
+
 // Move files from IE asset folder to build
 function ie() {
     return gulp.src( 'src/assets/ie/*' )
@@ -180,5 +187,6 @@ function watch() {
     gulp.watch( 'src/pages/**/*.html' ).on( 'change', gulp.series( pages, browser.reload ) );
     gulp.watch( ['src/layouts/**/*', 'src/partials/**/*'] ).on( 'change', gulp.series( refresh, pages, browser.reload ) );
     gulp.watch( ['../scss/**/*.scss', 'src/assets/scss/**/*.scss'] ).on( 'change', gulp.series( refresh, json, scss, pages, browser.reload ) );
+    gulp.watch( 'src/assets/js/**/*' ).on( 'change', gulp.series( js, browser.reload ) );
     gulp.watch( 'src/assets/img/**/*' ).on( 'change', gulp.series( images, browser.reload ) );
 }
